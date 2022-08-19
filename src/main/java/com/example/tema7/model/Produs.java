@@ -24,5 +24,6 @@ public class Produs {
     private Integer stocInitial;
     private boolean deleted = false;
     private Tip tip;
+    private Integer pret;
 
 }

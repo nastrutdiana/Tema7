@@ -22,7 +22,7 @@ public class ProdusService {
     }
 
     public void insert(Produs produs){
-        produsRepository.save(produs);
+         produsRepository.save(produs);
     }
 
     public void incrementProdus(Integer id){
@@ -48,9 +48,10 @@ public class ProdusService {
         produsRepository.save(p);
     }
 
-    public void actualizareStoc(Integer id, Integer stoc){
+    public Produs actualizareStoc(Integer id, Integer stoc){
         Produs p = produsRepository.findById(id).get();
         p.setStocInitial(stoc);
         produsRepository.save(p);
+        return p;
     }
 }
